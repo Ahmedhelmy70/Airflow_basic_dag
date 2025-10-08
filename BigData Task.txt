@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------
+# Airflow DAG Task
+1. Create a DAG named Airflow_Depi
+2. Add 3 tasks:
+   - Print current date (BashOperator)
+   - Print welcome message with your name (PythonOperator)
+   - Generate a random number and save it to `/tmp/random.txt` (PythonOperator)
+3. Set task order: Task 1 → Task 2 → Task 3
+4. Run and ensure all tasks succeed
+5. Take screenshots of the DAG and logs
+6. Add screenshots + notes to README
+7. Upload project to GitHub
+8. Deadline: 7 October 
+
+--------------------------------------------------------------------------------
+# Flights Project Task
+1. Run the the flights project and ensure it starts without errors
+2. Verify all components are working correctly
+3. Take screenshots of the running project and its output
+4. Add the screenshots to this README with brief notes
+5. Upload the project and README to GitHub
+6. Deadline: 10 October 

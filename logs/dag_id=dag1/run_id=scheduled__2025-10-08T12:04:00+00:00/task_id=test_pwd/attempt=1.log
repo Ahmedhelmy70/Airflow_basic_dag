@@ -1,0 +1,27 @@
+[2025-10-08T12:05:05.036+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-08T12:05:05.074+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag1.test_pwd scheduled__2025-10-08T12:04:00+00:00 [queued]>
+[2025-10-08T12:05:05.088+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag1.test_pwd scheduled__2025-10-08T12:04:00+00:00 [queued]>
+[2025-10-08T12:05:05.088+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-08T12:05:05.108+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): test_pwd> on 2025-10-08 12:04:00+00:00
+[2025-10-08T12:05:05.120+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=424) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-10-08T12:05:05.122+0000] {standard_task_runner.py:63} INFO - Started process 426 to run task
+[2025-10-08T12:05:05.123+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag1', 'test_pwd', 'scheduled__2025-10-08T12:04:00+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp8a5zf5vb']
+[2025-10-08T12:05:05.126+0000] {standard_task_runner.py:91} INFO - Job 96: Subtask test_pwd
+[2025-10-08T12:05:05.142+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-10-08T12:05:05.191+0000] {task_command.py:426} INFO - Running <TaskInstance: dag1.test_pwd scheduled__2025-10-08T12:04:00+00:00 [running]> on host 567e6f4df55c
+[2025-10-08T12:05:05.331+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag1' AIRFLOW_CTX_TASK_ID='test_pwd' AIRFLOW_CTX_EXECUTION_DATE='2025-10-08T12:04:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-08T12:04:00+00:00'
+[2025-10-08T12:05:05.334+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-08T12:05:05.335+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-08T12:05:05.336+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'pwd']
+[2025-10-08T12:05:05.357+0000] {subprocess.py:86} INFO - Output:
+[2025-10-08T12:05:05.360+0000] {subprocess.py:93} INFO - /tmp/***tmp43bc3vnw
+[2025-10-08T12:05:05.361+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-08T12:05:05.362+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-08T12:05:05.437+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag1, task_id=test_pwd, run_id=scheduled__2025-10-08T12:04:00+00:00, execution_date=20251008T120400, start_date=20251008T120505, end_date=20251008T120505
+[2025-10-08T12:05:05.539+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-10-08T12:05:05.591+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-08T12:05:05.593+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
